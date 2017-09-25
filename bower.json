@@ -1,0 +1,19 @@
+{
+  "name": "travel-site",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "",
+  "devDependencies": {
+    "modular-scale": "^2.1.3",
+    "typi": "^2.3.0",
+    "susy": "^2.2.12",
+    "breakpoint-sass": "^2.7.1"
+  },
+  "dependencies": {
+    "typi": "^2.3.0",
+    "modular-scale": "^2.1.3",
+    "susy": "^2.2.12",
+    "breakpoint-sass": "^2.7.1"
+  }
+}

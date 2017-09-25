@@ -1,0 +1,21 @@
+@include breakpoint-set("to ems", true);
+
+@include border-box-sizing; 
+
+$susy: (
+    columns: 12,
+    container: auto,
+    gutters: 1/4,
+    gutter-position: inside,
+    debug: (image: show-columns, toggle: top right, output: overlay),
+
+);
+
+
+$lightblue: #2f5572;
+$orange: #d59541;
+
+
+$small: 530px;
+$medium: 800px;
+$large: 1200px;
