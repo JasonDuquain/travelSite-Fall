@@ -16,6 +16,12 @@
         grid-column: 2/3;
     }
     
+    #features .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em 4em;
+    }
+    
     .row__medium-6 {
         
     }
