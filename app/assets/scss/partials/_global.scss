@@ -13,16 +13,18 @@ img {
 }
 
 .page-section {
-    
+    padding: 0 calc(50% - 600px);
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
     
     @include breakpoint($medium) {
-    
-        
+    padding-top: 4.5rem;   
     }
     
-    @include breakpoint(max-width 1200px) {
-        
+    @include breakpoint($large) {
+        padding: 4.5rem calc(50% - 600px) 0 calc(50% - 600px);
     }
+    
 }
 
 .page-section--blue {
@@ -31,11 +33,12 @@ img {
 }
 
 .wrapper--medium {
-    
+    max-width: 976px;
+    margin: 0 auto;
 }
 
 a {
-    
+    color: $orange;
 }
 
 .page-section--no-b-padding-until-medium {
