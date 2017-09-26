@@ -697,6 +697,12 @@ a {
         grid-template-columns: 1fr 1fr;
     grid-gap: 1em 4em;
   }
+  #features .feature-item {
+    -ms-grid-row: auto;
+        grid-row: auto;
+    -ms-grid-column: auto;
+        grid-column: auto;
+  }
 }
 
 .section-title {

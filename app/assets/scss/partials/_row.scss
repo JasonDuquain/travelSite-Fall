@@ -22,8 +22,9 @@
         grid-gap: 1em 4em;
     }
     
-    .row__medium-6 {
-        
+    #features .feature-item {
+        grid-row: auto;
+        grid-column: auto;
     }
     
     .page-section--testimonials .row__medium-4 {
