@@ -1,42 +1,64 @@
 
 .page-section--testimonials {
-    
+    background-color: #e0e6ef;
     
     @include breakpoint($medium) {
-        
+       background: url('../../assets/images/testimonials-bg.jpg') top center no-repeat;
+        background-size: cover; 
     } //breakpoint
     
     .section-title--blue {
-        
+        color: $lightblue;
     }
     
     .testimonial {
-        
+        background-color: rgba(255,255,255,.8);
+        padding: 0 18px 1px 18px; 
+        margin-bottom: 98px;
         
         @include breakpoint($medium) {
-            
+            padding: 0 1.812rem 1px 1.8125rem;
+            margin-bottom: 40px;
         }
         
     } //.testimonial
 
-    .testimonial--last {
-        
+    
+    @include breakpoint(max-width $medium) {
+        .testimonial--last {
+            margin-bottom: 0;
+        }
     }
     
     .testimonial__photo {
-        
+        width: 160px;
+        height: 160px;
+        border-radius: 80px;
+        overflow: hidden;
+        margin: 0 auto -80px auto;
+        position: relative;
+        top: -80px;
+        border: 6px solid rgba(255,255,255,.8);
     }
     
     .testimonial__title {
-        
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin: 0;
+        color: $lightblue;
     }
     
     .testimonial__subtitle {
-        
+        color: $orange;
+        text-align: center;
+        font-weight: 400;
+        font-size: .9375rem;
+        margin: .25rem 0 1rem 0;
     }
     
     .row--t-padding {
-        
+        padding-top: 80px;
     }
 
     .row--gutters-small {
@@ -49,11 +71,11 @@
     
     .row--equal-height-at-medium {
         @include breakpoint($medium) {
-                     
+            display: flex;
         }
         
         & > div {
-           
+           display: flex;
         } // breakpoint
         
     }
@@ -61,14 +83,12 @@
 } //.page-section--testimonials
 
 .page-section--no-b-padding-until-medium {
-    
+    padding-bottom: 0;
     
    @include breakpoint($medium) {
-        
+        padding-bottom: 4.5rem;
     } 
     
-  
     
 }
-
 

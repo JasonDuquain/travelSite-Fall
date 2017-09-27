@@ -3,9 +3,8 @@
     
     .row {
         display: grid;
-        grid-template-columns: 33.33% 66.66%;
+        grid-template-columns: 1fr 2fr;
         grid-column-gap: 1em;
-        
     }
     
     .row__medium-4--larger {
@@ -27,8 +26,15 @@
         grid-column: auto;
     }
     
+    #testimonials .row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 3em;
+    }
+    
     .page-section--testimonials .row__medium-4 {
-        
+        //grid-row: auto;
+        //grid-column: auto;
     } 
 
 }
