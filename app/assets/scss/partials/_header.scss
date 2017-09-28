@@ -7,7 +7,12 @@
     transition: background-color 300ms ease-out;
 
     @include breakpoint($medium) {
-       background-color: rgba($lightblue,.3); 
+       background-color: rgba($lightblue,.3);
+        position: fixed;
+        
+        &--dark {
+            background-color: rgba(23,51,72,.85);
+        }
     }
     
     
@@ -25,6 +30,7 @@
             float: right;
         } 
     }
+
 
 } //.site-header
 
@@ -72,6 +78,10 @@
                     padding: 12px 0;
                     font-size: 1rem;
                     background-color: transparent;
+                    
+                    &.is-current-link {
+                        color: #fabb69;
+                    }
                 }
             }
             
@@ -95,10 +105,15 @@
     left: 50%;
     transform: translateX(-50%) scale(.8);
     transform-origin: 50% 0;
+    transition: transform 300ms ease-out;
     
     @include breakpoint($medium) {
         left: auto;
         transform: translateX(0);
+        
+        .site-header--dark & {
+            transform: scale(.54);
+        }
     }
 }
 
@@ -188,4 +203,18 @@
     opacity: 1;
     z-index: 1;
     transform: scale(1);
+}
+
+@keyframes targett {
+    0% {
+        background-color: goldenrod;
+    }
+    
+    100% {
+        background-color: initial;
+    }
+}
+
+div:target > h2 {
+    animation: targett 1200ms ease-out;
 }
