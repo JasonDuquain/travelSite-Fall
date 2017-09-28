@@ -1,4 +1,4 @@
-/*MobileMenu.js*/
+/******MobileMenu.js*******/
 
 class MobileMenu {
     constructor() {
@@ -24,7 +24,7 @@ class MobileMenu {
 var mobileMenu = new MobileMenu();
 
 
-/* RevealOnScroll.js*/
+/******** RevealOnScroll.js********/
 
 class RevealOnScroll {
     constructor() {
@@ -103,6 +103,54 @@ class StickyHeader {
 
 
 var stickyHeader = new StickyHeader();
+
+/* Modal.js */
+
+class Modal {
+    constructor() {
+        this.openModalButton = document.querySelectorAll('.open-modal');
+        this.modal = document.querySelector('.modal');
+        this.closeModalButton = document.querySelector('.modal__close');
+        this.events();
+    }
+    
+    openModal() {
+       this.modal.classList.add('.modal--is-visible');
+        return false;
+        
+    }
+    
+    closeModal() {
+       
+        return false; 
+        
+    }
+    
+    events() {
+        
+        this.openModalButton.forEach((openBtn) => {
+            openBtn.addEventListener('click', () => {
+            this.modal.classList.add('modal--is-visible');
+            return false; 
+            }); 
+        });
+
+       this.closeModalButton.addEventListener('click', () => {
+            this.modal.classList.remove('modal--is-visible');
+       });
+        
+        document.addEventListener('keyup', (e) => {
+            if (e.keyCode === 27) {
+               this.modal.classList.remove('modal--is-visible'); 
+            }
+        })
+        
+    }
+    
+}
+
+
+var modal = new Modal();
 
 
 
